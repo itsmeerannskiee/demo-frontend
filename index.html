@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KedaiCorleone</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Kedai<span>Corleone</span>.</a>
+
+      <div class="navbar-nav">
+        <a href="#" class="active">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        <a href="#" id="pengaturan"><i data-feather="settings"></i></a>
+      </div>
+    </nav>
+
+    <!-- Panel Pengaturan -->
+    <div class="pengaturan-panel">
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+
+    <!-- 🔍 Search Panel -->
+    <div class="search-panel">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Cari menu favoritmu di sini..."
+      />
+      <button id="closeSearch">&times;</button>
+    </div>
+
+    <!-- 🛒 Cart Panel -->
+    <div class="cart-panel">
+      <h3>Keranjang Kamu</h3>
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <p>Total: <span id="totalPrice">IDR 0</span></p>
+      </div>
+      <button id="checkoutBtn" class="btn">Checkout</button>
+    </div>
+
+    <main>
+      <!-- Section Hero -->
+      <section class="hero-section">
+        <div class="section-content">
+          <div class="hero-details">
+            <h2 class="title">
+              Coffee Terbaik Hanya Di Kedai<span>Corleone</span>
+            </h2>
+            <h3 class="subtitle">Nikmati Harimu Dengan Secangkir Coffee</h3>
+
+            <div class="button">
+              <a href="#" class="button-order-now">Order Sekarang</a>
+              <a href="#contact" class="button-contact-us">Contact Us</a>
+            </div>
+          </div>
+
+          <div class="hero-image-Wrapper">
+            <img
+              src="images/coffee-hero-section.png"
+              alt="Hero"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2>Tentang Kami</h2>
+      <div class="row">
+        <div class="about-img">
+          <img src="img/tentang-kami.jpg" alt="Tentang Kami" />
+        </div>
+        <div class="content">
+          <h3>Kenapa memilih kopi kami?</h3>
+          <p>
+            Kami menyajikan biji kopi pilihan terbaik yang diolah dengan cinta,
+            menghadirkan rasa khas dan aroma menggoda.
+          </p>
+          <p>
+            KedaiCorleone hadir untuk menemani harimu dengan secangkir kopi
+            hangat dan suasana nyaman.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+      <h2>Menu Kami</h2>
+      <p>Pilih kopi favoritmu dan rasakan sensasi nikmatnya!</p>
+
+      <div class="row">
+        <div class="menu-card" data-name="Hot Beverages" data-price="25000">
+          <img
+            src="images/hot-beverages.png"
+            alt="Hot Beverages"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">Hot Beverages</h3>
+          <p class="menu-card-price">IDR 25k</p>
+          <input type="add-cart" value="Add Cart" />
+        </div>
+
+        <div class="menu-card" data-name="Cold Beverages" data-price="25000">
+          <img
+            src="images/cold-beverages.png"
+            alt="Cold Beverages"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">Cold Beverages</h3>
+          <p class="menu-card-price">IDR 25k</p>
+          <input type="add-cart" value="Add Cart" />
+        </div>
+
+        <div class="menu-card" data-name="Refreshment" data-price="25000">
+          <img
+            src="images/refreshment.png"
+            alt="Refreshment"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">Refreshment</h3>
+          <p class="menu-card-price">IDR 25k</p>
+          <input type="add-cart" value="Add Cart" />
+        </div>
+        <div
+          class="menu-card"
+          data-name="burger-frenchfries"
+          data-price="25000"
+        >
+          <img
+            src="images/burger-frenchfries.png"
+            alt="burger-frenchfries"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">Burger Frenchfries</h3>
+          <p class="menu-card-price">IDR 25k</p>
+          <input type="add-cart" value="Add Cart" />
+        </div>
+        <div class="menu-card" data-name="special-combo" data-price="25000">
+          <img
+            src="images/special-combo.png"
+            alt="Refreshment"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">Special Combo</h3>
+          <p class="menu-card-price">IDR 25k</p>
+          <input type="add-cart" value="Add Cart" />
+        </div>
+        <div class="menu-card" data-name="Desserts" data-price="25000">
+          <img
+            src="images/desserts.png"
+            alt="Refreshment"
+            class="menu-card-img"
+          />
+          <h3 class="menu-card-title">Dessert</h3>
+          <p class="menu-card-price">IDR 25k</p>
+          <input type="add-cart" value="Add Cart" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Kontak Kami</h2>
+      <p>Hubungi kami jika ada pertanyaan atau pesan khusus untuk pesananmu.</p>
+
+      <div class="container">
+        <form action="">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+          />
+
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="" disabled selected>Your Country</option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+            <option value="idn">Indonesia</option>
+          </select>
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style="height: 200px"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col logo-col">
+          <h3 class="footer-logo">Kedai<span>Corleone</span>.</h3>
+          <p>© 2025 KedaiCorleone. All rights reserved.</p>
+          <div class="footer-socials">
+            <a href="#"><i data-feather="facebook"></i></a>
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <p>Jl. STM Suka Elok No.5, Kec. Medan Johor<br />Kota Medan</p>
+          <p>kedai.corleone@gmail.com</p>
+          <p>0812-3456-7890</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Learn More</h4>
+          <ul>
+            <li><a href="#about">Profile</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Kontak</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Import JS utama -->
+    <script src="js/hamburger.js"></script>
+    <script src="js/pengaturan.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
